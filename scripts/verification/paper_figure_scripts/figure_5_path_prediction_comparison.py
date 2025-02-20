@@ -1,14 +1,14 @@
 import pickle
+from multiprocessing import Pool
+
+import cv2 as cv
 import matplotlib
+import matplotlib.lines as mlines
 import matplotlib.pyplot as plt
 import numpy as np
-import matplotlib.lines as mlines
-import cv2 as cv
-import pickle
-from multiprocessing import Pool
 import verification.collision_verification.collision_probability as collision_probability
-import verification.collision_verification.initial_state as initial_state
 import verification.collision_verification.collision_verification_constants as constants
+import verification.collision_verification.initial_state as initial_state
 
 font = {'family' : 'normal',
         'weight' : 'bold',

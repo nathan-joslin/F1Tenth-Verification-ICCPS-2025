@@ -31,7 +31,7 @@ RUN apt install ros-noetic-ackermann-msgs
 
 RUN pip3 install numpy scipy==1.8.0 torch torchvision tqdm matplotlib==3.5.3 matplotlib-inline==0.1.3
 
-RUN /bin/bash -c "source /opt/ros/noetic/setup.bash && cd home && mkdir catkin_ws && cd catkin_ws && mkdir src && cd src && git clone https://github.com/rbrown78137/F1Tenth-Verification-ICCPS-2025.git && git clone https://github.com/rbrown78137/F1Tenth-Simulator-ICCPS-2025.git && git clone https://github.com/rbrown78137/F1Tenth-Vision-ICCPS-2025.git && cd .. && catkin_make"
+RUN /bin/bash -c "source /opt/ros/noetic/setup.bash && cd home && mkdir catkin_ws && cd catkin_ws && mkdir src && cd src && git clone https://github.com/rbrown78137/F1Tenth-Verification-ICCPS-2025.git && git clone https://github.com/rbrown78137/F1Tenth-Simulator-ICCPS-2025.git && git clone https://github.com/rbrown78137/F1Tenth-Vision-ICCPS-2025.git && cd .. && catkin_make -j1"
 
 RUN echo "export GAZEBO_MODEL_PATH=/home/catkin_ws/src/F1Tenth-Simulator-ICCPS-2025" >> ~/.bashrc
 
