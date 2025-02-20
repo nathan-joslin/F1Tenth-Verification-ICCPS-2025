@@ -1,7 +1,8 @@
+import collision_verification.collision_predicate as collision_predicate
+import collision_verification.model_reachability as model_reachability
 import numpy as np
-from verification.collision_verification.probstar import ProbStar
-import verification.collision_verification.model_reachability as model_reachability
-import verification.collision_verification.collision_predicate as collision_predicate
+from collision_verification.probstar import ProbStar
+
 
 # Adds breaking to the normal collision probability problem by applying acceleration to V between each model time step
 def breaking_example_probstars(k,reachability_start_idx,reachability_dt,model_sub_time_steps,X_0,sigma_0,U_0,breaking_acceleration_constant,standard_deviations=6):

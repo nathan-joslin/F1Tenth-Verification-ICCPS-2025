@@ -1,19 +1,20 @@
 #!/usr/bin/env python
-import rospy
-from std_msgs.msg import Float64MultiArray
-import verification.collision_verification.collision_probability as collision_probability
-import verification.collision_verification.collision_verification_constants as constants
-import verification.collision_verification.transform_perception_input as transform_perception_input
-import verification.collision_verification.transform_odometry_input as transform_odometry_input
-from verification.collision_verification.fast_pool import FastPool
-from ackermann_msgs.msg import AckermannDriveStamped
-import time
-import signal
-from nav_msgs.msg import Odometry
-import threading
-import numpy as np
 import copy
-import verification.collision_verification.initial_state as initial_state
+import signal
+import threading
+import time
+
+import collision_verification.collision_probability as collision_probability
+import collision_verification.collision_verification_constants as constants
+import collision_verification.initial_state as initial_state
+import collision_verification.transform_odometry_input as transform_odometry_input
+import collision_verification.transform_perception_input as transform_perception_input
+import numpy as np
+import rospy
+from ackermann_msgs.msg import AckermannDriveStamped
+from collision_verification.fast_pool import FastPool
+from nav_msgs.msg import Odometry
+from std_msgs.msg import Float64MultiArray
 
 # ROS TOPICS
 pose_topic = "/pose_data"

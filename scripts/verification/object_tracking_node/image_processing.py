@@ -1,8 +1,11 @@
-import verification.object_tracking_node.constants as constants
-import cv2 as cv
-import torch
 import math
+
+import cv2 as cv
 import matplotlib.pyplot as plt
+import object_tracking_node.constants as constants
+import torch
+
+
 def prepare_image(cv_rgb_image, min_x, max_x, min_y, max_y):
     resized_image = cv.resize(cv_rgb_image, (constants.pose_network_width, constants.pose_network_width))
     cropped_image = cv_rgb_image[math.floor(max(0, min_y) * constants.camera_pixel_height):math.ceil(min(1, max_y) * constants.camera_pixel_height), math.floor(max(0, min_x) * constants.camera_pixel_width):math.ceil(min(1, max_x) * constants.camera_pixel_width)]

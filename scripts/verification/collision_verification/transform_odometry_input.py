@@ -1,5 +1,6 @@
 import copy
-import verification.collision_verification.collision_verification_constants as constants
+
+import collision_verification.collision_verification_constants as constants
 
 '''
 This file translates the raw odometry input to the most likely true value of the speed and steering angle on the car 

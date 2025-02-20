@@ -1,20 +1,17 @@
-from mpl_toolkits.mplot3d import Axes3D
-import matplotlib.pyplot as plt
-import matplotlib
-# matplotlib.use('Agg')
-import verification.collision_verification.collision_probability as collision_probability
-import matplotlib.pyplot as plt
-import numpy as np
-import verification.collision_verification.initial_state as initial_state
-import verification.collision_verification.collision_verification_constants as constants
+import copy
 import pickle
 from multiprocessing import Pool
-import verification.collision_verification.collision_verification_constants as constants
-import copy
-import numpy as np
+
+# matplotlib.use('Agg')
+import collision_verification.collision_probability as collision_probability
+import collision_verification.collision_verification_constants as constants
+import collision_verification.initial_state as initial_state
+import matplotlib
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
+import numpy as np
 import tqdm
+from mpl_toolkits.mplot3d import Axes3D
+
 font = {'family' : 'normal',
         'weight' : 'bold',
         'size'   : 16}

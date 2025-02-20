@@ -1,23 +1,24 @@
+import copy
+import pickle
+import signal
+import threading
+import time
+from threading import Thread
+
+import collision_verification.collision_probability as collision_probability
+import collision_verification.collision_verification_constants as constants
+import collision_verification.initial_state as initial_state
+import collision_verification.transform_odometry_input as transform_odometry_input
+import collision_verification.transform_perception_input as transform_perception_input
+import cv2 as cv
+import matplotlib
 import matplotlib.animation as animation
-import rospy
-from std_msgs.msg import Float64MultiArray
 import matplotlib.pyplot as plt
 import numpy as np
-import time
-import signal
-from threading import Thread
-import cv2 as cv
-import copy
+import rospy
+from collision_verification.fast_pool import FastPool
 from nav_msgs.msg import Odometry
-import threading
-from verification.collision_verification.fast_pool import FastPool
-import verification.collision_verification.collision_probability as collision_probability
-import verification.collision_verification.collision_verification_constants as constants
-import verification.collision_verification.transform_perception_input as transform_perception_input
-import verification.collision_verification.transform_odometry_input as transform_odometry_input
-import verification.collision_verification.initial_state as initial_state
-import pickle
-import matplotlib
+from std_msgs.msg import Float64MultiArray
 
 font = {'family' : 'normal',
         'weight' : 'bold',

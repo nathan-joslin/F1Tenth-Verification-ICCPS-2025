@@ -1,36 +1,36 @@
-import matplotlib.animation as animation
-from matplotlib.patches import Polygon
-import rospy
-from std_msgs.msg import Float64MultiArray
-import matplotlib.pyplot as plt
-import numpy as np
+import copy
 import math
-from ackermann_msgs.msg import AckermannDriveStamped
-import time
-import signal
-from threading import Thread
+import os
 import pickle
-from sensor_msgs.msg import Image
+import signal
+import sys
+import threading
+import time
+from threading import Thread
+
+import collision_verification.collision_predicate as collision_predicate
+import collision_verification.collision_verification_constants as constants
+import collision_verification.initial_state as initial_state
+import collision_verification.transform_odometry_input as transform_odometry_input
+import collision_verification.transform_perception_input as transform_perception_input
 import cv2 as cv
 import cv_bridge
-import copy
-import torch
-import rospkg
-import verification.collision_verification.collision_predicate as collision_predicate
-import verification.collision_verification.collision_verification_constants as constants
-import verification.collision_verification.transform_odometry_input as transform_odometry_input
-import verification.collision_verification.transform_perception_input as transform_perception_input
-import verification.collision_verification.initial_state as initial_state
+import matplotlib
+import matplotlib.animation as animation
+import matplotlib.pyplot as plt
+import numpy as np
 import pypoman
+import rospkg
+import rospy
+import torch
+from ackermann_msgs.msg import AckermannDriveStamped
 from matplotlib.patches import Polygon
+from nav_msgs.msg import Odometry
 from numpy import array, dot, hstack
 from pylab import axis, gca
 from scipy.spatial import ConvexHull
-from nav_msgs.msg import Odometry
-import threading
-import sys
-import os
-import matplotlib
+from sensor_msgs.msg import Image
+from std_msgs.msg import Float64MultiArray
 
 font = {'family' : 'normal',
         'weight' : 'bold',

@@ -1,10 +1,11 @@
-import math
-import numpy as np
-from verification.collision_verification.probstar import ProbStar
-import verification.collision_verification.model_reachability as model_reachability
-import verification.collision_verification.collision_predicate as collision_predicate
-import verification.collision_verification.initial_state as initial_state
 import copy
+import math
+
+import collision_verification.collision_predicate as collision_predicate
+import collision_verification.initial_state as initial_state
+import collision_verification.model_reachability as model_reachability
+import numpy as np
+from collision_verification.probstar import ProbStar
 
 
 # Main Quantitative Verification Problem in Paper

@@ -1,9 +1,10 @@
-import time
-import verification.collision_verification.collision_probability as collision_probability
-import verification.collision_verification.initial_state as initial_state
-import verification.collision_verification.collision_verification_constants as constants
-from verification.collision_verification.fast_pool import FastPool
 import pickle
+import time
+
+import collision_verification.collision_probability as collision_probability
+import collision_verification.collision_verification_constants as constants
+import collision_verification.initial_state as initial_state
+from collision_verification.fast_pool import FastPool
 
 if __name__ == "__main__":
     # Match Simulator Shape for testing

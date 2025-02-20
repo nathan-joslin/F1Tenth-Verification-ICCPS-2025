@@ -1,7 +1,9 @@
 import math
-from math import atan2,atan,tan,cos
-import verification.collision_verification.collision_verification_constants as constants
+from math import atan, atan2, cos, tan
+
+import collision_verification.collision_verification_constants as constants
 import numpy as np
+
 
 # Input: 2 bounding boxes represented as a list of verticies corresponding to the covnex hull of bounding box 
 # Output: List of verticies of convex hull of minkowski difference

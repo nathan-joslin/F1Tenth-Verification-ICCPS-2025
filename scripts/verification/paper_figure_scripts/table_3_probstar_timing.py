@@ -1,9 +1,10 @@
-import time
-import verification.collision_verification.collision_probability as collision_probability
-import verification.collision_verification.initial_state as initial_state
-from verification.collision_verification.fast_pool import FastPool
-import verification.collision_verification.collision_verification_constants as constants
 import pickle
+import time
+
+import collision_verification.collision_probability as collision_probability
+import collision_verification.collision_verification_constants as constants
+import collision_verification.initial_state as initial_state
+from collision_verification.fast_pool import FastPool
 
 if __name__ == "__main__":
     print("Timings in miliseconds:\n")

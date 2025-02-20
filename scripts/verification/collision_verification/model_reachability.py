@@ -1,7 +1,10 @@
 import math
-from math import cos, tan, atan
+from math import atan, cos, tan
+
+import collision_verification.collision_verification_constants as constants
 import numpy as np
-import verification.collision_verification.collision_verification_constants as constants
+
+
 # V = Car Velocity, s = steering angle, dt = model time duration
 def circular_path_jacobian_A(raw_V, s, dt):
     # Clipping at low velocities to prevent long term motion of stationary objects

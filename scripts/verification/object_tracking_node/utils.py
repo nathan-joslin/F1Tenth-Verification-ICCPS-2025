@@ -1,9 +1,11 @@
-import torch
-import verification.object_tracking_node.constants as constants
-import matplotlib.pyplot as plt
-import matplotlib.patches as patches
-import time
 import math
+import time
+
+import matplotlib.patches as patches
+import matplotlib.pyplot as plt
+import object_tracking_node.constants as constants
+import torch
+
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 def iou_width_height(boxes1, boxes2):

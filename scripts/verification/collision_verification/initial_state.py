@@ -1,12 +1,14 @@
-import math
-import verification.collision_verification.collision_verification_constants as constants
-import verification.collision_verification.kinematic_bicycle_antiderivative as kinematic_bicycle_antiderivative
-import numpy as np
-import time
-from torch.autograd.functional import hessian,jacobian
-import torch
 import copy
+import math
+import time
 from statistics import mean
+
+import collision_verification.collision_verification_constants as constants
+import collision_verification.kinematic_bicycle_antiderivative as kinematic_bicycle_antiderivative
+import numpy as np
+import torch
+from torch.autograd.functional import hessian, jacobian
+
 # SOLVE_USING_ANGLE_DTHETA = True
 
 def initial_state(prefiltered_pose_history,prefiltered_actuation_history, prefiltered_pose_time_history):

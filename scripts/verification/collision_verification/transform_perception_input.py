@@ -1,5 +1,7 @@
-import verification.collision_verification.collision_verification_constants as constants
-from math import cos,sin
+from math import cos, sin
+
+import collision_verification.collision_verification_constants as constants
+
 '''
 File to Translate real world sensor data to car center of reference frame
 In our implementation, our camera was slightly loose, so the angle of rotation or camera_yaw_offset was different between different recordings

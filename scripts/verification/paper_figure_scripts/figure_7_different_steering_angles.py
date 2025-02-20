@@ -1,23 +1,23 @@
-from mpl_toolkits.mplot3d import Axes3D
-from mpl_toolkits.mplot3d.art3d import Poly3DCollection
-import matplotlib.pyplot as plt
-import matplotlib
+import copy
+import math
+import pickle
+import time
+from multiprocessing import Pool
+
 # matplotlib.use('Agg')
-import verification.collision_verification.collision_probability as collision_probability
+import collision_verification.collision_probability as collision_probability
+import collision_verification.collision_verification_constants as constants
+import collision_verification.initial_state as initial_state
+import cv2 as cv
+import matplotlib
+import matplotlib.cm as cm
+import matplotlib.lines as mlines
 import matplotlib.pyplot as plt
 import numpy as np
-import verification.collision_verification.initial_state as initial_state
-import verification.collision_verification.collision_verification_constants as constants
-import matplotlib.lines as mlines
-import cv2 as cv
-import pickle
-from multiprocessing import Pool
-import verification.collision_verification.collision_verification_constants as constants
-from verification.collision_verification.fast_pool import FastPool
-import time
-import copy
-import matplotlib.cm as cm
-import math
+from collision_verification.fast_pool import FastPool
+from mpl_toolkits.mplot3d import Axes3D
+from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+
 font = {'family' : 'normal',
         'weight' : 'bold',
         'size'   : 16}

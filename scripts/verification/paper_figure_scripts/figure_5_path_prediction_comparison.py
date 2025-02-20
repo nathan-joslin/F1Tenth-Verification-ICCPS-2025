@@ -1,14 +1,16 @@
 import pickle
 from multiprocessing import Pool
 
+import collision_verification.collision_probability as collision_probability
+import collision_verification.collision_verification_constants as constants
+import collision_verification.initial_state as initial_state
 import cv2 as cv
 import matplotlib
 import matplotlib.lines as mlines
 import matplotlib.pyplot as plt
 import numpy as np
-import verification.collision_verification.collision_probability as collision_probability
-import verification.collision_verification.collision_verification_constants as constants
-import verification.collision_verification.initial_state as initial_state
+
+matplotlib.use("Agg")
 
 font = {'family' : 'normal',
         'weight' : 'bold',
@@ -101,4 +103,5 @@ if __name__ == "__main__":
     ax.set_xlim(-0.6,-0.35)
     # fig.canvas.draw()
     plt.plot()
-    plt.show(block=True)
+    # plt.show(block=True)
+    plt.savefig("/tmp/testfigures/test.png")

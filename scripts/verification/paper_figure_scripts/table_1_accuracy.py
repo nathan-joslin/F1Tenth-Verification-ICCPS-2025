@@ -1,16 +1,16 @@
-import pickle
-import matplotlib
-import matplotlib.pyplot as plt
-import numpy as np
-import matplotlib.lines as mlines
-import cv2 as cv
+import math
 import pickle
 from multiprocessing import Pool
-import verification.collision_verification.collision_probability as collision_probability
-import verification.collision_verification.initial_state as initial_state
-import verification.collision_verification.collision_verification_constants as constants
-import math
 from statistics import mean
+
+import collision_verification.collision_probability as collision_probability
+import collision_verification.collision_verification_constants as constants
+import collision_verification.initial_state as initial_state
+import cv2 as cv
+import matplotlib
+import matplotlib.lines as mlines
+import matplotlib.pyplot as plt
+import numpy as np
 
 font = {'family' : 'normal',
         'weight' : 'bold',
